@@ -31,7 +31,7 @@
 <div class="container" id="main">
 
     <!-- Form Start -->
-    <form id="vol-form" action="confirmation.php" method="post">
+    <form id="vol-form" action="conformation.php" method="post">
 
     <fieldset class="form-group">
     <div class="row form-row">
@@ -104,7 +104,7 @@
 <!--        </div>-->
 <!--    </fieldset>-->
 
-    <button id="submit" type="submit" class="btn btn-primary"> Submit your order</button>
+    <button id="submit" type="submit" class="btn btn-primary"> Order</button>
     <form>
 </div>
 

@@ -27,16 +27,39 @@ $newTotal = number_format($total*3.50, 2);
     //validation
     $isValid = true;
 
-
-
-    echo "<p>Thank you, $name, for your order!</p><br>";
-
-    echo "<p>Order Summary:</p>";
-    foreach($cupCake as $flavor){
-        echo "<p>• $flavor </p>";
+    // Name validation
+    if($name != ""){
+        $Name = $name;
+    }
+    else{
+        echo "<p>Name is required</p>";
+        $isValid = false;
     }
 
-    echo "<p>Order Total: $$newTotal</p>";
+    if(isset($cupCake)){
+        $CupCake = $cupCake;
+    }
+    else{
+        echo "<p>Please select at least one cupcake flavor</p>";
+        $isValid = false;
+    }
+
+    if($isValid) {
+
+        echo "<p>Thank you, $name, for your order!</p><br>";
+
+        echo "<p>Order Summary:</p>";
+        foreach ($cupCake as $flavor) {
+            echo "<p>• $flavor </p>";
+        }
+
+        echo "<p>Order Total: $$newTotal</p>";
+
+    }
 ?>
 </body>
+
+<!--&& $cupCake == "grasshopper" || $cupCake == "maple" || $cupCake == "carrot" ||-->
+<!--$cupCake == "caramel" || $cupCake == "velvet" ||-->
+<!--$cupCake == "lemon" || $cupCake == "tiramisu"){-->
 </html>

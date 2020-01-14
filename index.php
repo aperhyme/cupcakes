@@ -1,5 +1,4 @@
 <?php
-
     // Turn on error reporting -- this is critical!
     ini_set('display_errors',1);
     error_reporting(E_ALL);
@@ -47,8 +46,8 @@
     </div>
     </fieldset>
 
+    <!-- associative array with the values of the different cupcake flavors -->
     <fieldset class="form-group">
-
     <div class="col-fill col-sm-4">
     <?php
     $cakeName = array("grasshopper" => "The Grasshopper", "maple" => "Whiskey Maple Bacon",
@@ -62,48 +61,7 @@
     ?>
     </div>
     </fieldset>
-<!--     Interests -->
-<!--    <fieldset class="form-group">-->
-<!---->
-<!--         Roles that interest you -->
-<!--        <div class="custom-control custom-checkbox">-->
-<!--            <input class="custom-control-input" type="checkbox" value="Events" id="roles1" name="roles[]">-->
-<!--            <label class="custom-control-label" for="roles1">-->
-<!--                Events(Annual College Tour, Community Services, Annual New Year's Eve Day Event)-->
-<!--            </label>-->
-<!--        </div>-->
-<!--        <div class="custom-control custom-checkbox">-->
-<!--            <input class="custom-control-input" type="checkbox" value="Fundraising" id="roles2" name="roles[]">-->
-<!--            <label class="custom-control-label" for="roles2">-->
-<!--                Fundraising-->
-<!--            </label>-->
-<!--        </div>-->
-<!--        <div class="custom-control custom-checkbox">-->
-<!--            <input class="custom-control-input" type="checkbox" value="Newsletter" id="roles3" name="roles[]">-->
-<!--            <label class="custom-control-label" for="roles3">-->
-<!--                Newsletter production(monthly)-->
-<!--            </label>-->
-<!--        </div>-->
-<!--        <div class="custom-control custom-checkbox">-->
-<!--            <input class="custom-control-input" type="checkbox" value="Volunteer Coordination" id="roles4" name="roles[]">-->
-<!--            <label class="custom-control-label" for="roles4">-->
-<!--                Volunteer coordination-->
-<!--            </label>-->
-<!--        </div>-->
-<!--        <div class="custom-control custom-checkbox">-->
-<!--            <input class="custom-control-input" type="checkbox" value="Mentoring" id="roles5" name="roles[]">-->
-<!--            <label class="custom-control-label" for="roles5">-->
-<!--                Mentoring-->
-<!--            </label>-->
-<!--        </div>-->
-<!--        <div class="custom-control custom-checkbox">-->
-<!--            <input class="custom-control-input" type="checkbox" value="Other" id="roles6" name="roles[]">-->
-<!--            <label class="custom-control-label" for="roles6">-->
-<!--                Other-->
-<!--            </label>-->
-<!--        </div>-->
-<!--    </fieldset>-->
-
+     <!-- Submit button -->
     <button id="submit" type="submit" class="btn btn-primary"> Order</button>
     <form>
 </div>

@@ -8,14 +8,13 @@
  */
 
 // Turn on error reporting -- this is critical!
-ini_set('display_errors',1);
-error_reporting(E_ALL);
+//ini_set('display_errors',1);
+//error_reporting(E_ALL);
 
 $name = $_POST["Name"];
 $cupCake = $_POST["cupCake"];
 $total = count($cupCake);
 $newTotal = number_format($total*3.50, 2);
-
 
 ?>
 
@@ -43,32 +42,44 @@ $newTotal = number_format($total*3.50, 2);
         $isValid = false;
     }
 
-    // Checkbox validation to see if flavors selected, if not prints out a message
+    // check to see if a checkbox was selected
     if(isset($cupCake)){
-        $CupCake = $cupCake;
+        $newCupCake = $cupCake;
     }
     else{
-        echo "<p>Please select at least one cupcake flavor</p>";
+        echo "<p>Please select a flavor</p>";
         $isValid = false;
     }
 
+
+    // check to see if bad data is imputed, prints out invalid input if value of flavor is changed
+    foreach ($cupCake as $flavor) {
+        if (isset($flavor) && $flavor == "The Grasshopper" || $flavor == "Whiskey Maple Bacon" ||
+            $flavor == "Carrot Walnut" || $flavor == "Salted Caramel Cupcake" || $flavor ==
+            "Red Velvet" || $flavor == "Lemon Drop" || $flavor == "Tiramisu") {
+
+        }
+        else {
+            echo "<p>Invalid Input</p>";
+            $isValid = false;
+        }
+    }
+
+
     // if everything is valid prints out the summary
-    if($isValid) {
+if($isValid) {
+    echo "<p>Thank you, $name, for your order!</p><br>";
 
-        echo "<p>Thank you, $name, for your order!</p><br>";
+    echo "<p>Order Summary:</p>";
+    foreach ($cupCake as $flavor) {
 
-        echo "<p>Order Summary:</p>";
-        foreach ($cupCake as $flavor) {
             echo "<p>• $flavor </p>";
+
         }
 
-        echo "<p>Order Total: $$newTotal</p>";
+    echo "<p>Order Total: $$newTotal</p>";
+}
 
-    }
 ?>
 </body>
-
-<!--&& $cupCake == "grasshopper" || $cupCake == "maple" || $cupCake == "carrot" ||-->
-<!--$cupCake == "caramel" || $cupCake == "velvet" ||-->
-<!--$cupCake == "lemon" || $cupCake == "tiramisu"){-->
 </html>

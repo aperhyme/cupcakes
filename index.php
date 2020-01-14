@@ -1,4 +1,12 @@
 <?php
+
+/**
+ * Alex Grigorenko
+ * 1/13/20
+ * http://agrigorenko.greenriverdev.com/328/cupcakes/index.php
+ * Form that allows you to select what cupcakes you would like to order
+ */
+
     // Turn on error reporting -- this is critical!
     ini_set('display_errors',1);
     error_reporting(E_ALL);
